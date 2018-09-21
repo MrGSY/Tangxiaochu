@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.asus.tangtang">
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/TangXiaoChu_Style"
+        tools:replace="android:icon">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Log_in" android:launchMode="singleTask" android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".Join"
+            android:launchMode="singleTask" />
+        <activity android:name=".Page_One" android:launchMode="singleTask" android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".Join2"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Join3"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Join4"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Join5"
+            android:launchMode="singleTask" />
+        <activity android:name=".FoodStreet" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".FoodBlackList" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".SetPersonInfo" />
+        <activity android:name=".CommonSettings" />
+        <activity android:name=".XuetangChart" />
+        <activity android:name=".ShowDish"/>
+        <activity android:name=".QAndAActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".DisplayAdviceActivity"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#808080"
+    tools:context=".XuetangChart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorHeadline">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="血糖统计"
+                        android:textSize="18dp" />
+
+                    <ImageButton
+                        android:id="@+id/goback_xuetangchart"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@color/colorHeadline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/button_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/outline"
+                        android:text="今日血糖"
+                        android:textColor="#66605d"
+                        tools:layout_editor_absoluteX="360dp"
+                        tools:layout_editor_absoluteY="63dp" />
+
+
+                    <Button
+                        android:id="@+id/button_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="本周血糖"
+                        android:textColor="#66605d"
+                        tools:layout_editor_absoluteY="48dp" />
+
+
+                    <Button
+                        android:id="@+id/button_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="本月血糖"
+                        android:textColor="#66605d"
+                        tools:layout_editor_absoluteX="360dp"
+                        tools:layout_editor_absoluteY="63dp" />
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/chart_outline">
+
+                </com.github.mikephil.charting.charts.LineChart>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout15"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/stamp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/suger_daytext">
+
+                <TextView
+                    android:id="@+id/suger_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="血糖最大值"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_max_kongfu"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:textColor="#5b9bd5"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_max_fanhou"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:textColor="#ed7d31"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_max_shuiqian"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:textColor="#59453d"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:gravity="right|bottom"
+                    android:text="(mmol/L)"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout14"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/stamp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/suger_daytext">
+
+                <TextView
+                    android:id="@+id/suger_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="血糖最小值"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_min_kongfu"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:textColor="#5b9bd5"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_min_fanhou"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:textColor="#ed7d31"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_min_shuiqian"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:textColor="#59453d"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:gravity="right|bottom"
+                    android:text="(mmol/L)"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout16"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/stamp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout15">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="血糖合格率"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_pass_percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/stamp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout15">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="血糖平均值"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/suger_mean"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="#32cd32"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:gravity="right|bottom"
+                    android:text="(mmol/L)"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/suger_daytext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#808080"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
+

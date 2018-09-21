@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ececec"
+    tools:context=".FoodBlackList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorHeadline">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的食物黑名单"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <ImageButton
+            android:id="@+id/goback_foodblacklist"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/colorHeadline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/FoodImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:baselineAligned="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/foodblacklist" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginStart="90dp"
+            android:orientation="horizontal"
+            android:background="@drawable/outline_foodblacklistadd">
+
+            <EditText
+                android:id="@+id/foodtoaddtoblacklist"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="输入菜名"
+                android:textSize="15dp"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/addtoblacklist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:text=" 添 加"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#c2c2c2"
+        android:text="    黑名单中的食物将不会出现在您的推荐食谱上，点击菜名可以将其移出黑名单" />
+
+    <com.hitomi.refresh.view.FunGameRefreshView
+        android:id="@+id/game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:game_type="battle_city">
+
+        <ListView
+            android:id="@+id/foodblacklist_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="55dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="8dp"
+            android:divider="#000000"
+            android:dividerHeight="5px">
+        </ListView>
+    </com.hitomi.refresh.view.FunGameRefreshView>
+</LinearLayout>

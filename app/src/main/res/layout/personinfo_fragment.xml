@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settingbackground" />
+
+    <ImageView
+        android:id="@+id/userimage_PersonInfo"
+        android:layout_width="130dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/appp" />
+
+    <TextView
+        android:id="@+id/username_PersonInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的用户名"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/userimage_PersonInfo"
+        app:layout_constraintStart_toEndOf="@+id/userimage_PersonInfo"
+        app:layout_constraintTop_toTopOf="@+id/userimage_PersonInfo" />
+
+    <Button
+        android:id="@+id/set_PersonInfo"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="个人资料"
+        android:textColor="#fff"
+        android:background="@drawable/outline_nobg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/set_FoodBlackList"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="我的食物黑名单"
+        android:textColor="#fff"
+        android:background="@drawable/outline_nobg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_PersonInfo" />
+
+    <Button
+        android:id="@+id/common_settings"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="设置"
+        android:background="@drawable/outline_nobg"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_FoodBlackList" />
+
+</android.support.constraint.ConstraintLayout>
